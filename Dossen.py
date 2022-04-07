@@ -30,6 +30,10 @@ with open('Dossen.csv','w',encoding="utf-8") as fhandle:
         
 #Main crawl fonction
 def crawl(ville) : 
+    #Making sure all drivers don't start at the same time
+    time.sleep(random.uniform(1,5))
+    
+    #Setting up driver
     chrome_options = Options()
     path = r".\chromedriver_win32\chromedriver.exe"
     chrome_options.add_argument("--headless")
