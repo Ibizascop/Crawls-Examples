@@ -31,8 +31,8 @@ with open('Dossen.csv','w',encoding="utf-8") as fhandle:
 #Main crawl fonction
 def crawl(ville) : 
     chrome_options = Options()
-    path = r"C:\Cours\Python\chromedriver_win32\chromedriver.exe"
-    #chrome_options.add_argument("--headless")
+    path = r".\chromedriver_win32\chromedriver.exe"
+    chrome_options.add_argument("--headless")
     chrome = webdriver.Chrome(executable_path= path ,options=chrome_options)
     chrome.maximize_window()
     try :
@@ -70,7 +70,6 @@ def crawl(ville) :
 
         #NEXT PAGES
         last_page_not_reached = True
-            #Other pages
         while last_page_not_reached :
             i = 0
             btn = False
