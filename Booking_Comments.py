@@ -5,6 +5,7 @@ Created on Wed Apr  6 22:42:27 2022
 @author: ibiza
 """
 
+# An example on how to crawl comments on hotels on the website Booking.com
 
 import os
 import time
